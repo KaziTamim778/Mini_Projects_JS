@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Score and Progress styling */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b7280;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 10px;
+}
+
+#question-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1f2937;
+    min-height: 60px; /* Keeps layout from jumping if questions are long */
+}
+
+/* Input Field Styling */
+#answer-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#answer-input:focus {
+    border-color: #3b82f6;
+}
+
+/* Feedback text (Correct/Incorrect) */
+.feedback {
+    height: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.feedback.correct { color: #10b981; }
+.feedback.wrong { color: #ef4444; }
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+#restart-btn {
+    background-color: #10b981;
+    margin-top: 15px;
+}
+
+#restart-btn:hover {
+    background-color: #059669;
+}
+
+/* The Secret Weapon for hiding/showing screens in JS */
+.hidden {
+    display: none !important;
+}

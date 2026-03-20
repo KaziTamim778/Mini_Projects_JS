@@ -1,0 +1,111 @@
+body {
+	background: #222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.operator-btn {
+	background: #ff9500;
+	color: #fff;
+}
+
+#buttons button {
+	font-size: 1.4rem;
+	border: none;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	background: #333;
+	color: #fff;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+	margin: 0 auto;
+}
+
+#buttons button:active {
+	background: #444;
+}
+
+#buttons button.operator-btn {
+	background: #ff9500;
+	color: #fff;
+}
+
+#buttons button.operator-btn:last-child {
+	background: #d4d4d2;
+	color: #222;
+}
+
+#buttons button:nth-child(17) {
+	background: #d4d4d2;
+	color: #222;
+}
+
+#display {
+	background: #1c1c1c;
+	color: #fff;
+	font-size: 2.5rem;
+	border: none;
+	border-radius: 16px;
+	padding: 20px 16px;
+	text-align: right;
+	margin-bottom: 8px;
+	outline: none;
+	letter-spacing: 1px;
+}
+
+#calculator {
+	background: #1c1c1c;
+	border-radius: 32px;
+	box-shadow: 0 4px 32px rgba(0,0,0,0.5);
+	padding: 32px 24px 24px 24px;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+#display {
+	background: #222;
+	color: #fff;
+	font-size: 2.2rem;
+	border: none;
+	border-radius: 16px;
+	padding: 16px;
+	text-align: right;
+	margin-bottom: 8px;
+	outline: none;
+}
+
+#buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+}
+
+#buttons button {
+	font-size: 1.4rem;
+	border: none;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	background: #333;
+	color: #fff;
+	cursor: pointer;
+	transition:  background 0.2s, color 0.2s;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#buttons button:active {
+	background: #444;
+}
+
+.operator-btn {
+	background: #ff9500;
+	color: #fff;
+}
+

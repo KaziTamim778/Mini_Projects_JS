@@ -1,0 +1,138 @@
+/* --- Base Reset & Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: #111827;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Header & Search Bar --- */
+header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #111827;
+    letter-spacing: -0.5px;
+}
+
+.search-container {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3b82f6;
+}
+
+#search-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #111827;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#search-btn:hover {
+    background-color: #374151;
+}
+
+#search-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- The Gallery (Masonry Layout) --- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px 40px 20px;
+    text-align: center;
+}
+
+.gallery {
+    /* This creates the interlocking Pinterest-style columns */
+    column-count: 3;
+    column-gap: 20px;
+    width: 100%;
+}
+
+/* Styling for the images your JS will create */
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    break-inside: avoid; /* Prevents an image from being split across columns */
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Show More Button --- */
+#show-more-btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111827;
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#show-more-btn:hover {
+    background-color: #d1d5db;
+}
+
+/* JS toggle class */
+.hidden {
+    display: none !important;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .gallery { column-count: 2; }
+}
+
+@media (max-width: 600px) {
+    .gallery { column-count: 1; }
+    .search-container { flex-direction: column; }
+}

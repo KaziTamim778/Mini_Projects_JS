@@ -1,0 +1,83 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 0.02em;
+}
+
+button#generateColors {
+    display: block;
+    margin: 0 auto 36px auto;
+    padding: 14px 38px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px 0 rgba(102, 126, 234, 0.15);
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    letter-spacing: 0.04em;
+}
+button#generateColors:hover {
+    background: linear-gradient(90deg, #5a67d8 0%, #6b47b6 100%);
+    box-shadow: 0 8px 32px 0 rgba(102, 126, 234, 0.22);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.color-pallete {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 28px;
+    width: max-content;
+    padding: 36px 44px;
+    border-radius: 32px;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.16);
+    border: 1.5px solid #e2e8f0;
+}
+
+.color {
+    width: 120px;
+    height: 120px;
+    border-radius: 22px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+    background-color: #222;
+    transition: background 0.4s, box-shadow 0.3s, transform 0.2s;
+    border: 2.5px solid #f3f4f6;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+.color:hover {
+    box-shadow: 0 12px 40px 0 rgba(0,0,0,0.22);
+    border-color: #667eea;
+    transform: scale(1.05);
+}
+
+.color-label {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.92);
+    color: #222;
+    font-size: 1.01rem;
+    font-weight: 500;
+    padding: 4px 16px;
+    border-radius: 9px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+    opacity: 0.96;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+    transition: background 0.2s, color 0.2s;
+}
